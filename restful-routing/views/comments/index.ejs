@@ -1,0 +1,20 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1 class="display-1">RESTful Comments Demo</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi suscipit, laudantium voluptatem vero recusandae, inventore ut, veniam minus quibusdam minima ea nisi voluptatum fuga repellendus velit beatae necessitatibus aperiam.</p>
+
+    <h2>Comments</h2>
+    <ul>
+      <% for (let comment of comments) { %>
+      <li>
+        <%= comment.body %> - <strong><%= comment.username %> </strong>
+        <a class="badge bg-primary" href="/comments/<%= comment.id %>"><i class="bi bi-box-arrow-in-right"></i>Details</a>
+        <a class="badge bg-success" href="/comments/<%= comment.id %>/edit"><i class="bi bi-pencil"></i>Edit</a>
+      </li>
+      <% } %>
+    </ul>
+    <a class="btn btn-success" href="/comments/new" role="button"><i class="bi bi-chat-square-dots"></i> New Comment</a>
+
+<%- include("../partials/footer") %>

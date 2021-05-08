@@ -1,0 +1,23 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1 class="display-3 mb-5">New Comment</h1>
+    
+    <form action="/comments" method="POST">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="username-label">
+          <i class="bi bi-person"></i>
+        </span>
+        <input type="text" class="form-control" id="username" name="username" placeholder="username" aria-label="username" aria-describedby="username-label">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="comment-label">
+          <i class="bi bi-chat-square-dots me-2"></i> Comment
+        </span>
+        <textarea id="comment" name="comment" class="form-control" aria-describedby="comment-label"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success"><i class="bi bi-chat-square-dots"></i> Post New Comment</button>
+      <a class="btn btn-danger" href="/comments" role="button">Cancel</a>
+    </form>
+
+<%- include("../partials/footer") %>

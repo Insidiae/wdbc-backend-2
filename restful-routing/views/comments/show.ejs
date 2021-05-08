@@ -1,0 +1,21 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1>Comment #<%= comment.id %></h1>
+
+    <figure>
+      <blockquote class="blockquote">
+        <p><%= comment.body %></p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <%= comment.username %> 
+      </figcaption>
+    </figure>
+
+    <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+      <a class="btn btn-primary" href="/comments"><i class="bi bi-box-arrow-left"></i> Go Back</a>
+      <a class="btn btn-success" href="/comments/<%= comment.id %>/edit"><i class="bi bi-pencil"></i> Edit Comment</a>
+      <button class="btn btn-danger" type="submit"><i class="bi bi-trash"></i> Delete Comment</button>
+    </form>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,18 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1 class="display-5">Editing <%= comment.username %>'s Comment</h1>
+    <p class="mb-5"><em>(Comment #<%= comment.id %>)</em></p>
+    
+    <form action="/comments/<%= comment.id %>?_method=PATCH" method="POST">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="comment-label">
+          <i class="bi bi-chat-square-dots me-2"></i> Comment
+        </span>
+        <textarea id="comment" name="comment" class="form-control" aria-describedby="comment-label"><%= comment.body %></textarea>
+      </div>
+      <button type="submit" class="btn btn-success"><i class="bi bi-chat-square-dots"></i> Update Comment</button>
+      <a class="btn btn-danger" href="/comments" role="button">Cancel</a>
+    </form>
+
+<%- include("../partials/footer") %>
