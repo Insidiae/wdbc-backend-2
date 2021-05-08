@@ -1,0 +1,25 @@
+<%- include("partials/head") %>
+<%- include("partials/navbar") %>
+
+      <% if (subredditData.hasOwnProperty(subreddit)) { %>
+      <h1>
+        <%= subredditData[subreddit].name %> - <%=
+        subredditData[subreddit].description %>
+      </h1>
+      <h3><em><%= subredditData[subreddit].subscribers %> Subscribers</em></h3>
+      <hr />
+
+      <h2>Posts</h2>
+      <% for (let post of subredditData[subreddit].posts) { %>
+      <article>
+        <p><%= post.title %> - <strong><%= post.author %></strong></p>
+        <% if (post.img) { %>
+        <img src="<%= post.img %>" class="img-fluid" alt="<%= post.title %>" />
+        <% } %>
+      </article>
+      <% } %> <% } else { %>
+      <h1>Welcome to the r/<%= subreddit %> Subreddit</h1>
+      <h2><em>Nothing here yet...</em></h2>
+      <% } %>
+
+<%- include("partials/footer") %>

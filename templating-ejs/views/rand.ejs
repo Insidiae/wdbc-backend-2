@@ -1,0 +1,16 @@
+<%- include("partials/head") %>
+<%- include("partials/navbar") %>
+
+    <h1>Your Random Number Is: <%= randNum %></h1>
+
+    <% if (randNum === 7) {%>
+    <h2>Wow, so lucky!</h2>
+    <% } else if (randNum === 4) { %>
+    <img
+      src="https://i.kym-cdn.com/entries/icons/facebook/000/029/204/Mista_choosing_from_4_cakes_1-7_screenshot.jpg"
+      class="img-fluid"
+      alt="4"
+    />
+    <% } %>
+
+<%- include("partials/footer") %>
