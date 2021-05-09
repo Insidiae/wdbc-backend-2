@@ -7,3 +7,4 @@
 3. [Templating with EJS](./templating-ejs/)
 4. [RESTful Routing](./restful-routing/)
 5. [Mongo and Mongoose](./mongoose-basics/)
+6. [Mongoose with Express](./mongoose-express/)
