@@ -5,3 +5,5 @@
 1. [NPM modules](./modules-npm/)
 2. [Express Basics](./express-basics/)
 3. [Templating with EJS](./templating-ejs/)
+4. [RESTful Routing](./restful-routing/)
+5. [Mongo and Mongoose](./mongoose-basics/)
