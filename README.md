@@ -8,3 +8,4 @@
 4. [RESTful Routing](./restful-routing/)
 5. [Mongo and Mongoose](./mongoose-basics/)
 6. [Mongoose with Express](./mongoose-express/)
+7. [Express Middlewares](./express-middlewares)
