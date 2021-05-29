@@ -9,3 +9,5 @@
 5. [Mongo and Mongoose](./mongoose-basics/)
 6. [Mongoose with Express](./mongoose-express/)
 7. [Express Middlewares](./express-middlewares)
+8. [Express Error Handling](./express-error-handling)
+9. [Express Async Errors](./express-async-errors)
