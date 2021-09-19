@@ -1,0 +1,16 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1><%= product.name %> - <em>$<%= product.price %> </em></h1>
+    <p class="lead"><em>From <a href="/farms/<%= product.farm._id %>"><%= product.farm.name %></a></em></p>
+    
+    <p class="lead"><em>Category: <a href="/products?category=<%= product.category %>"><%= product.category %></a></em></p>
+
+
+    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+      <a class="btn btn-primary" href="/products"><i class="bi bi-box-arrow-left"></i> Go Back</a>
+      <a class="btn btn-success" href="/products/<%= product.id %>/edit"><i class="bi bi-pencil"></i> Edit Product</a>
+      <button class="btn btn-danger" type="submit"><i class="bi bi-trash"></i> Delete Product</button>
+    </form>
+
+<%- include("../partials/footer") %>

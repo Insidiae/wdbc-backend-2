@@ -1,0 +1,18 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1>Viewing All Farms</h1>
+    
+    <ul>
+      <% for (let farm of farms) { %>
+      <li>
+        <%= farm.name %>
+        <a class="badge bg-primary" href="/farms/<%= farm.id %>"><i class="bi bi-box-arrow-in-right"></i>Details</a>
+        <a class="badge bg-success" href="/farms/<%= farm.id %>/edit"><i class="bi bi-pencil"></i>Edit</a>
+      </li>
+      <% } %>
+    </ul>
+
+    <a class="btn btn-success" href="/farms/new" role="button"><i class="bi bi-plus-circle"></i> New Farm</a>
+
+<%- include("../partials/footer") %>

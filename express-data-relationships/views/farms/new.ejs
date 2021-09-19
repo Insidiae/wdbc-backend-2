@@ -1,0 +1,25 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1 class="display-3 mb-5">Add a Farm</h1>
+    
+    <form action="/farms" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Farm Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+
+      <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city" name="city">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+<%- include("../partials/footer") %>
