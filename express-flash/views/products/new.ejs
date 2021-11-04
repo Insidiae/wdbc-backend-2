@@ -1,0 +1,30 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1 class="display-3 mb-5">Add a Product for <%= farm.name %></h1>
+    
+    <form action="/farms/<%= farm._id %>/products" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+
+      <label for="price" class="form-label">Price</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="number" class="form-control" id="price" name="price" step="0.01">
+      </div>
+
+      <label for="category" class="form-label">Category</label>
+      <select id="category" name="category" class="form-select mb-3" aria-label="Product Category">
+        <% for (let category of categories) { %>
+          <option value="<%= category %>"><%= category[0].toUpperCase() + category.slice(1) %></option>
+        <% } %>
+      </select>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <a class="btn btn-primary mt-3" href="/farms/<%= farm._id %>"><i class="bi bi-box-arrow-left"></i>Back to Farm</a>
+
+<%- include("../partials/footer") %>

@@ -13,3 +13,7 @@
 9. [Express Async Errors](./express-async-errors)
 10. [Mongo Data Relationships](./mongo-data-relationships)
 11. [Mongo Relationships with Express](./express-data-relationships)
+12. [Express Router](./express-router)
+13. [Express Cookies](./express-cookies)
+14. [Express Sessions](./express-sessions)
+15. [Express Flash](./express-flash)

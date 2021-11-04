@@ -1,0 +1,16 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+
+    <h1>Viewing All <%= typeof category !== "undefined" ? category : "" %> Products</h1>
+    
+    <ul>
+      <% for (let product of products) { %>
+      <li>
+        <%= product.name %> - <em>$<%= product.price %> </em>
+        <a class="badge bg-primary" href="/products/<%= product.id %>"><i class="bi bi-box-arrow-in-right"></i>Details</a>
+        <a class="badge bg-success" href="/products/<%= product.id %>/edit"><i class="bi bi-pencil"></i>Edit</a>
+      </li>
+      <% } %>  
+    </ul>
+
+<%- include("../partials/footer") %>
