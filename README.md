@@ -17,3 +17,4 @@
 13. [Express Cookies](./express-cookies)
 14. [Express Sessions](./express-sessions)
 15. [Express Flash](./express-flash)
+16. [Authentication from "Scratch"](./authentication)
